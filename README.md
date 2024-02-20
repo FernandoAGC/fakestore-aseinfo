@@ -1,27 +1,21 @@
 # FakestoreAseinfo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+Este proyecto es desarrollado como solucion a la practica tecnica FrontEnd sobre el framework Angular de la empresa ASEINFO.
 
-## Development server
+# Desarrollador candidato
+Desarrollado por: Fernando Amilcar Galicia Cáceres.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Tecnologias: Angular, Angular Material, Fake Store API.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+####
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This project is developed as a solution to the FrontEnd technical practice on the Angular framework of the ASEINFO company.
 
-## Running end-to-end tests
+# Candidate developer
+Developed by: Fernando Amilcar Galicia Cáceres.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Technologies: Angular, Angular Material, Fake Store API.
