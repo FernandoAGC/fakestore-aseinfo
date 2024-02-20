@@ -1,0 +1,34 @@
+.container {
+    background-color: #f9f9f9;
+    width: 100vw;
+    padding: 24px;
+}
+
+.gr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.it {
+    background-color: green;
+    height: 100px;
+    max-width: 900px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        padding: 12px;
+    }
+}
