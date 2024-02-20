@@ -7,3 +7,21 @@
         <input [(ngModel)]="items" matSliderThumb>
     </mat-slider>
 </div>
+
+<div class="sort-controls">
+    <div>
+        <label>Sort by</label>
+    </div>
+
+    <mat-form-field class="sortOption">
+        <mat-select [(value)]="selectedOption">
+            <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="sortOption">
+        <mat-select [(value)]="selectedOrder">
+            <mat-option *ngFor="let o of order" [value]="o">{{o}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
