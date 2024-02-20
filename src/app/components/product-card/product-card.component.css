@@ -10,3 +10,17 @@ mat-card-content {
 mat-card-content .price {
     font-size: 1.25em;
 }
+
+mat-card-actions button:first-child {
+    margin-right: 2px;
+}
+
+mat-card-actions button:last-child {
+    margin-left: 2px;
+}
+
+.imgCard {
+    object-fit: contain;
+    max-height: 300px;
+    min-height: 100px;
+}
