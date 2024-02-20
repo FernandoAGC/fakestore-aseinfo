@@ -1,0 +1,35 @@
+.app-product-toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-items {
+    width: 25%;
+}
+
+.label-slider {
+    display: flex;
+    justify-content: space-between;
+}
+
+mat-slider {
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .slider-items {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-items {
+        width: 50%;
+    }
+}
+
+@media (max-width: 425px) {
+    .slider-items {
+        width: 100%;
+    }
+}
