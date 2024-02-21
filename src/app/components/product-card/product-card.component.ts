@@ -4,11 +4,12 @@ import {MatCardModule} from '@angular/material/card';
 import { Product } from '../../interfaces/product.interface';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductDialogComponent } from '../product-dialog/product-dialog.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, ProductDialogComponent],
+  imports: [MatCardModule, MatButtonModule, ProductDialogComponent, MatIconModule],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.css'
 })

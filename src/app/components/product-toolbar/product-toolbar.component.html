@@ -4,7 +4,7 @@
         <label>{{items}}</label>
     </div>
     <mat-slider min="1" max="20" step="1" showTickMarks discrete [displayWith]="formatLabel">
-        <input [(ngModel)]="items" (ngModelChange)="onItemsChange($event)" matSliderThumb>
+        <input class="inputSlider" [(ngModel)]="items" (ngModelChange)="onItemsChange($event)" matSliderThumb>
     </mat-slider>
 </div>
 

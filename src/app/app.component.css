@@ -1,18 +1,6 @@
 .container {
     background-color: #f9f9f9;
-    width: 100vw;
     padding: 24px;
-}
-
-.gr {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.it {
-    background-color: green;
-    height: 100px;
-    max-width: 900px;
 }
 
 @media (max-width: 1024px) {

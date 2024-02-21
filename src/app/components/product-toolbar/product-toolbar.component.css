@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
 .slider-items {
@@ -15,6 +17,11 @@
 
 mat-slider {
     width: 100%;
+    margin: 0 !important;
+}
+
+.inputSlider {
+    padding: 0 !important;
 }
 
 .sort-controls {
