@@ -32,6 +32,14 @@ export class ProductToolbarComponent {
     this.productService.setItems(value);
   }
 
+  onOptionChange(value: string) {
+    this.productService.setSortField(value);
+  }
+
+  onOrderChange(value: string) {
+    this.productService.setOrder(value);
+  }
+
   formatLabel(value: number): string {
     if (value >= 1000) {
       return Math.round(value / 1000) + 'k';

@@ -18,6 +18,8 @@ export class ProductCardsGridComponent {
 
   private products: Array<Product> = [];
   limit: number = 12;
+  sortField: string = 'Price';
+  order: string = 'ASC';
 
   constructor(private fsApiService: FakeStoreAPIService, private productService: ProductService) {}
 
@@ -30,10 +32,36 @@ export class ProductCardsGridComponent {
     this.productService.items$.subscribe(value => {
       this.limit = value;
     });
+    this.productService.sortField$.subscribe(value => {
+      this.sortField = value;
+    });
+    this.productService.order$.subscribe(value => {
+      this.order = value;
+    });
   }
 
   //items to be displayed
   getProducts(): Array<Product> {
+    if (this.sortField == 'Category') {
+      if (this.order == 'ASC') {
+        this.products.sort((a, b) => (a.category > b.category) ? 1 : -1);
+      } else {
+        this.products.sort((a, b) => (a.category > b.category) ? -1 : 1);
+      }
+    } else if (this.sortField == 'Alphabetical order') {
+      if (this.order == 'ASC') {
+        this.products.sort((a, b) => (a.title > b.title) ? 1 : -1);
+      } else {
+        this.products.sort((a, b) => (a.title > b.title) ? -1 : 1);
+      }
+    } else {
+      if (this.order == 'ASC') {
+        this.products.sort((a, b) => (a.price > b.price) ? 1 : -1);
+      } else {
+        this.products.sort((a, b) => (a.price > b.price) ? -1 : 1);
+      }
+    }
+
     return this.products.slice(0, this.limit);
   }
 
