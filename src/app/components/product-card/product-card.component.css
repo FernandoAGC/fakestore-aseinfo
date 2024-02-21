@@ -15,10 +15,12 @@ mat-card-title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    cursor: pointer;
 }
 
 mat-card-content .price {
     font-size: 1.25em;
+    font-weight: 500;
 }
 
 mat-card-actions button:first-of-type {
@@ -33,6 +35,7 @@ mat-card-actions button:first-of-type {
     width: 100%;
     object-fit: contain;
     height: 250px;
+    cursor: pointer;
 }
 
 mat-card-actions button:last-of-type span{
