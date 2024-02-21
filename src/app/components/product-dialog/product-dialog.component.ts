@@ -2,11 +2,12 @@ import { Component, Inject, Input } from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button'
 import { Product } from '../../interfaces/product.interface';
+import {MatChipsModule} from '@angular/material/chips';
 
 @Component({
   selector: 'app-product-dialog',
   standalone: true,
-  imports: [MatButtonModule, MatDialogModule],
+  imports: [MatButtonModule, MatDialogModule, MatChipsModule],
   templateUrl: './product-dialog.component.html',
   styleUrl: './product-dialog.component.css'
 })
