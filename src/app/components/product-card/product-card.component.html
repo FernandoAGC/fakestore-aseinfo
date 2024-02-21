@@ -1,7 +1,7 @@
 <mat-card class="productCard">
-    <img class="imgCard" mat-card-image [src]="product.image" [alt]="product.title">
+    <img class="imgCard" mat-card-image [src]="product.image" [alt]="product.title" (click)="openDialog()">
     <mat-card-header>
-        <mat-card-title>{{product.title}}</mat-card-title>
+        <mat-card-title (click)="openDialog()">{{product.title}}</mat-card-title>
         <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
@@ -10,7 +10,7 @@
         </p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-flat-button color="accent">DETAILS</button>
+        <button mat-flat-button color="accent" (click)="openDialog()">DETAILS</button>
         <button mat-flat-button color="primary">ADD TO CART</button>
     </mat-card-actions>
 </mat-card>
