@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { CommonModule } from '@angular/common';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-product-toolbar',
@@ -23,6 +24,13 @@ export class ProductToolbarComponent {
   selectedOption: string = 'Price';
   order: Array<string> = ['ASC', 'DESC']
   selectedOrder: string = 'ASC';
+
+  constructor(private productService: ProductService) {}
+
+  // Communication between components: modifying values
+  onItemsChange(value: number) {
+    this.productService.setItems(value);
+  }
 
   formatLabel(value: number): string {
     if (value >= 1000) {
