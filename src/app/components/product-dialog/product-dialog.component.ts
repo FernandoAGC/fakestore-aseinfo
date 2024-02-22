@@ -3,6 +3,7 @@ import {MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button'
 import { Product } from '../../interfaces/product.interface';
 import {MatChipsModule} from '@angular/material/chips';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-dialog',
@@ -13,6 +14,10 @@ import {MatChipsModule} from '@angular/material/chips';
 })
 export class ProductDialogComponent {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public product: Product) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public product: Product, private cartService: CartService) {}
+
+  addToCart() {
+    this.cartService.addItems(1);
+  }
 
 }

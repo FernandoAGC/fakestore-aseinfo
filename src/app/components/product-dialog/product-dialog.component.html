@@ -32,5 +32,5 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-flat-button color="warn" mat-dialog-close>CLOSE</button>
-    <button mat-flat-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>ADD TO CART</button>
+    <button mat-flat-button color="primary" (click)="addToCart()" [mat-dialog-close]="true" cdkFocusInitial>ADD TO CART</button>
 </mat-dialog-actions>

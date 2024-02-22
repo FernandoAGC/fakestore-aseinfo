@@ -6,6 +6,7 @@ import { ProductCardsGridComponent } from './components/product-cards-grid/produ
 import { ProductToolbarComponent } from './components/product-toolbar/product-toolbar.component';
 import { ProductService } from './services/product.service';
 import { FooterComponent } from './components/footer/footer.component';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [CommonModule, RouterOutlet, ToolbarComponent, ProductCardsGridComponent, ProductToolbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [ProductService]
+  providers: [ProductService, CartService]
 })
 export class AppComponent {
   title = 'fakestore-aseinfo';

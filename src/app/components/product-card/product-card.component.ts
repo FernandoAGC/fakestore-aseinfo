@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ProductDialogComponent } from '../product-dialog/product-dialog.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -18,12 +19,16 @@ export class ProductCardComponent {
 
   @Input() product!: Product;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private cartService: CartService) {}
 
   openDialog() {
     this.dialog.open(ProductDialogComponent, {
       data: this.product
     });
+  }
+
+  addToCart() {
+    this.cartService.addItems(1);
   }
 
 }

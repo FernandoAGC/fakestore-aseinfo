@@ -3,6 +3,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -14,5 +15,13 @@ import {MatBadgeModule} from '@angular/material/badge';
 export class ToolbarComponent {
 
   items: number = 0;
+
+  constructor(private cartService: CartService) {}
+
+  ngOnInit() {
+    this.cartService.items$.subscribe(value => {
+      this.items = value;
+    });
+  }
 
 }
