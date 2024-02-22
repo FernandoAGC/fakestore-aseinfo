@@ -1,0 +1,27 @@
+<div class="slider-items">
+    <div class="label-slider">
+        <label>Items</label>
+        <label>{{items}}</label>
+    </div>
+    <mat-slider min="1" max="20" step="1" showTickMarks discrete [displayWith]="formatLabel">
+        <input class="inputSlider" [(ngModel)]="items" (ngModelChange)="onItemsChange($event)" matSliderThumb>
+    </mat-slider>
+</div>
+
+<div class="sort-controls">
+    <div>
+        <label>Sort by</label>
+    </div>
+
+    <mat-form-field class="sortOption">
+        <mat-select [(value)]="selectedOption" (valueChange)="onOptionChange($event)">
+            <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="sortOption">
+        <mat-select [(value)]="selectedOrder" (valueChange)="onOrderChange($event)">
+            <mat-option *ngFor="let o of order" [value]="o">{{o}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

@@ -1,5 +1,5 @@
 .productCard {
-    max-width: 500px;
+    width: 100%;
 }
 
 mat-card-content {
@@ -7,20 +7,59 @@ mat-card-content {
     padding-bottom: 1em;
 }
 
-mat-card-content .price {
-    font-size: 1.25em;
+mat-card-header {
+    display: block;
 }
 
-mat-card-actions button:first-child {
+mat-card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+mat-card-content .price {
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+mat-card-actions button:first-of-type {
     margin-right: 2px;
 }
 
-mat-card-actions button:last-child {
+mat-card-actions button:first-of-type {
     margin-left: 2px;
 }
 
 .imgCard {
+    width: 100%;
     object-fit: contain;
-    max-height: 300px;
-    min-height: 100px;
+    height: 250px;
+    cursor: pointer;
+}
+
+mat-card-actions button:last-of-type span{
+    display: inline;
+}
+mat-card-actions button:last-of-type mat-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .imgCard {
+        height: 200px;
+    }
+    mat-card-actions button:last-of-type span{
+        display: none;
+    }
+    mat-card-actions button:last-of-type mat-icon {
+        display: block;
+        margin: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .imgCard {
+        height: 150px;
+    }
 }

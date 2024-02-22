@@ -1,0 +1,36 @@
+<mat-dialog-actions align="end">
+    <button mat-mini-fab color="warn" mat-dialog-close>X</button>
+</mat-dialog-actions>
+<mat-dialog-content class="mat-typography product-dialog-container">
+    <img class="imgCard" mat-card-image [src]="product.image" [alt]="product.title">
+    <div class="product-content">
+        <h2 class="product-title">{{product.title}}</h2>
+        <div class="product-description">
+            <p>{{product.description}}</p>
+        </div>
+        <div class="product-details">
+            <div class="product-detail">
+                <span class="detail-label">Price:</span>
+                <span class="detail-value" class="valuePrice">${{product.price}}</span>
+            </div>
+            <div class="product-detail">
+                <span class="detail-label">Category:</span>
+                <mat-chip>{{product.category}}</mat-chip>
+            </div>
+        </div>
+        <div class="product-rating">
+            <div class="rating-count">
+                <span class="count-label">Rating Count:</span>
+                <span class="count-value">{{product.rating.count}}</span>
+            </div>
+            <div class="rating-rate">
+                <span class="rate-label">Rating Rate:</span>
+                <span class="rate-value">{{product.rating.rate}}</span>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-flat-button color="warn" mat-dialog-close>CLOSE</button>
+    <button mat-flat-button color="primary" (click)="addToCart()" [mat-dialog-close]="true" cdkFocusInitial>ADD TO CART</button>
+</mat-dialog-actions>

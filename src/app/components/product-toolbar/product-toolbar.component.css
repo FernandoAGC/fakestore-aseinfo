@@ -1,0 +1,60 @@
+:host {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.slider-items {
+    width: 25%;
+}
+
+.label-slider {
+    display: flex;
+    justify-content: space-between;
+}
+
+mat-slider {
+    width: 100%;
+    margin: 0 !important;
+}
+
+.inputSlider {
+    padding: 0 !important;
+}
+
+.sort-controls {
+    width: fit-content;
+}
+
+.sortOption:first-of-type {
+    width: 150px;
+    margin-right: 2px;
+}
+
+.sortOption:last-of-type {
+    width: 100px;
+    margin-left: 2px;
+}
+
+@media (max-width: 1024px) {
+    .slider-items {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-items {
+        width: 40%;
+    }
+}
+
+@media (max-width: 425px) {
+    :host {
+        flex-direction: column-reverse;
+    }
+    .slider-items {
+        width: 100%;
+    }
+}
