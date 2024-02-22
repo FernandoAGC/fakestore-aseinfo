@@ -5,11 +5,12 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { ProductCardsGridComponent } from './components/product-cards-grid/product-cards-grid.component';
 import { ProductToolbarComponent } from './components/product-toolbar/product-toolbar.component';
 import { ProductService } from './services/product.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ToolbarComponent, ProductCardsGridComponent, ProductToolbarComponent],
+  imports: [CommonModule, RouterOutlet, ToolbarComponent, ProductCardsGridComponent, ProductToolbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [ProductService]
